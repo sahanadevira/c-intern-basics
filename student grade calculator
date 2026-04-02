@@ -1,0 +1,26 @@
+//Student grade calculator
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float marks[100], sum = 0, average;
+
+    // Step 1: Input number of subjects
+    printf("Enter number of subjects: ");
+    scanf("%d", &n);
+
+    // Step 2: Input marks
+    for(i = 0; i < n; i++) {
+        printf("Enter marks for subject %d: ", i + 1);
+        scanf("%f", &marks[i]);
+        sum += marks[i];  // add to total
+    }
+
+    // Step 3: Calculate average
+    average = sum / n;
+
+    // Step 4: Display result
+    printf("Average marks = %.2f\n", average);
+
+    return 0;
+}
